@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Ballet:opsz@16..72&family=Barrio&family=Imperial+Script&family=Indie+Flower&family=Lavishly+Yours&family=Loved+by+the+King&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Monoton&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Sofia&family=Source+Code+Pro:ital,wght@0,500;1,500&display=swap');
+
+.moodviz-container {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.moodviz-top-cards {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.moodviz-card {
+  flex: 1;
+  min-width: 220px;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  position: relative;
+}
+
+.moodviz-card.pink { border-top: 5px solid #f472b6; }
+.moodviz-card.yellow { border-top: 5px solid #fbbf24; }
+.moodviz-card.blue { border-top: 5px solid #60a5fa; }
+.moodviz-card.purple { border-top: 5px solid #a78bfa; }
+
+.moodviz-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  color: #6b7280;
+}
+
+.moodviz-card-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #6b21a8;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.moodviz-card-icon {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.moodviz-card-bar {
+  width: 100%;
+  height: 0.5rem;
+  background: #f3f4f6;
+  border-radius: 0.5rem;
+  margin: 0.3rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.moodviz-card-bar-fill {
+  height: 100%;
+  border-radius: 0.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.moodviz-card-bar-fill.pink { background: #f472b6; }
+.moodviz-card-bar-fill.yellow { background: #fbbf24; }
+.moodviz-card-bar-fill.blue { background: #60a5fa; }
+.moodviz-card-bar-fill.purple { background: #a78bfa; }
+
+.moodviz-card-desc {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.moodviz-section {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+}
+
+.moodviz-section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #6b21a8;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.moodviz-section-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  color: #a78bfa;
+}
+
+.moodviz-chart {
+  width: 100%;
+  height: 180px;
+}
+
+.moodviz-spectrum-row {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.moodviz-spectrum-card {
+  flex: 1;
+  min-width: 150px;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.moodviz-spectrum-icon {
+  font-size: 1.5rem;
+  color: #a78bfa;
+}
+
+.moodviz-spectrum-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.moodviz-spectrum-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #6b21a8;
+}
+
+.moodviz-spectrum-bar {
+  width: 100%;
+  height: 0.4rem;
+  background: #f3f4f6;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.moodviz-spectrum-bar-fill {
+  height: 100%;
+  border-radius: 0.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.moodviz-spectrum-bar-fill.joy { background: #22c55e; }
+.moodviz-spectrum-bar-fill.anxiety { background: #fbbf24; }
+.moodviz-spectrum-bar-fill.sadness { background: #60a5fa; }
+.moodviz-spectrum-bar-fill.energy { background: #a78bfa; }
+.moodviz-spectrum-bar-fill.calm { background: #38bdf8; }
+
+.moodviz-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.moodviz-half-card {
+  flex: 1;
+  min-width: 320px;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+
+.moodviz-factors-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.moodviz-factor-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.moodviz-factor-label {
+  flex: 1;
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+.moodviz-factor-bar {
+  flex: 2;
+  height: 0.5rem;
+  background: #f3f4f6;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.moodviz-factor-bar-fill {
+  height: 100%;
+  background: #a78bfa;
+  border-radius: 0.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.moodviz-factor-value {
+  font-size: 0.95rem;
+  color: #6b7280;
+  min-width: 80px;
+  text-align: right;
+}
+
+.moodviz-factor-status {
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.2rem 0.7rem;
+  border-radius: 0.5rem;
+}
+
+.moodviz-factor-status.optimal {
+  background: #22c55e;
+  color: #fff;
+}
+
+.moodviz-factor-status.attention {
+  background: #fbbf24;
+  color: #fff;
+}
+
+.moodviz-insights-row {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.moodviz-insight-card {
+  flex: 1;
+  min-width: 220px;
+  background: linear-gradient(90deg, #ede9fe 0%, #fce7f3 100%);
+  border-radius: 1rem;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.moodviz-insight-icon {
+  font-size: 1.3rem;
+  margin-bottom: 0.2rem;
+}
+
+.moodviz-insight-icon.green { color: #22c55e; }
+.moodviz-insight-icon.yellow { color: #fbbf24; }
+.moodviz-insight-icon.purple { color: #a78bfa; }
+
+.moodviz-insight-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.moodviz-insight-desc {
+  font-size: 0.95rem;
+  color: #6b21a8;
+}

@@ -1,0 +1,230 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f3ff; /* soft lavender */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Page container */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Header */
+.page-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #6b21a8;
+    margin-bottom: 0.25rem;
+}
+
+.page-subtitle {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+}
+
+/* Navigation tabs */
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.tab {
+    background: none;
+    border: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #6b7280;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.tab:hover {
+    background-color: #f3f4f6;
+}
+
+.tab.active {
+    color: #6b21a8;
+    background-color: #ede9fe;
+}
+
+/* Calendar card */
+.calendar-card {
+    max-width: 600px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+/* Calendar header */
+.calendar-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #6b21a8;
+}
+
+.calendar-nav button {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    color: #6b21a8;
+    transition: background-color 0.2s ease;
+}
+
+.calendar-nav button:hover {
+    background-color: #f3f4f6;
+}
+
+/* Phase legend */
+.calendar-legend {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: white;
+}
+
+.badge.menstrual { background-color: #ef4444; }
+.badge.follicular { background-color: #10b981; }
+.badge.ovulatory { background-color: #facc15; }
+.badge.luteal { background-color: #a78bfa; }
+
+/* Days of week */
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.day-label {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Calendar grid */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+}
+
+.day-empty {
+    min-height: 3rem;
+}
+
+/* Day cells */
+.day-cell {
+    position: relative;
+    min-height: 3rem;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: #374151;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.day-cell.today {
+    border: 2px solid #9333ea;
+    color: #7e22ce;
+    font-weight: bold;
+}
+
+.day-cell.menstrual { background-color: #fee2e2; border-color: #fecaca; }
+.day-cell.follicular { background-color: #d1fae5; border-color: #a7f3d0; }
+.day-cell.ovulatory { background-color: #fef3c7; border-color: #fde68a; }
+.day-cell.luteal { background-color: #ede9fe; border-color: #ddd6fe; }
+.day-cell.unknown { background-color: #f3f4f6; border-color: #e5e7eb; }
+
+/* Mood dot */
+.mood-dot {
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background-color: #d1d5db;
+}
+
+.mood-dot.active {
+    background-color: #c084fc;
+}
+
+/* Mood icons */
+.mood-icon {
+    position: absolute;
+    bottom: 0.25rem;
+    right: 0.25rem;
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+.mood-icon.happy { color: #ec4899; }
+.mood-icon.energetic { color: #fbbf24; }
+.mood-icon.neutral { color: #6b7280; }
+.mood-icon.sad { color: #3b82f6; }
+
+/* Day number */
+.day-number {
+    font-size: 0.875rem;
+}
+
+/* Cycle info box */
+.cycle-info {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid #e5e7eb;
+    font-size: 0.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: #374151;
+}
+
+.cycle-info span {
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.cycle-info strong {
+    margin-left: 0.5rem;
+    font-weight: 600;
+    color: #111827;
+}
